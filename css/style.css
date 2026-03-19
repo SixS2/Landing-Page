@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    background-color: #cacada; /* Cor do fundo */
+    color: #333333; /* Cor do Texto */
+    margin: 0; /* Remove o botão pra arrastar pra baixo */
+    height: 100vh; /* Diz que o corpo do site deve ocupar 100% da altura da tela (Viewport Height) */
+    display: flex; /* Ativa o modo de organização Flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna (um embaixo do outro) */
+    justify-content: center; /* Centraliza tudo na vertical (de cima para baixo) */
+    align-items: center; /* Centraliza tudo na horizontal (da esquerda para a direita) */
+}
+
+h1 {
+    color: #000000; /* Muda a cor do título */
+}
+
+a {
+    text-decoration: none; /* Remove aquele sublinhado feio de links */
+    color: white; /* Cor da letra do botão */
+    background-color: #000000; /* Cor do botão */
+    padding: 10px 20px; /* Tamanho do botão*/
+    border-radius: 5px; /* Arredonda as pontas do botão */
+    margin-top: 20px; /* Dá um espaço acima do botão */
+}
+
+a:hover {
+    background-color: #19222c31; /* Adiciona cor quando coloca o mouse em cima do botão*/
+}
