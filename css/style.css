@@ -88,7 +88,7 @@ body {
     color: #111827;                  /* Cor do texto preta */
 }
 
-/* Efeito ao passar o mouse (opcional) */
+/* Efeito ao passar o mouse */
 .lista-menu a:hover {
     filter: brightness(0.9);         /* Escurece levemente o botão ao passar o mouse */
     transform: translateY(-2px);     /* Faz o botão subir 2px (efeito de clique) */
@@ -131,5 +131,20 @@ main {
     background-color:  rgb(112, 169, 255);
     color: white;
     text-align: center;
-    padding: 15px;
+}
+
+.caixa-vidro {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 20px 0;
 }
