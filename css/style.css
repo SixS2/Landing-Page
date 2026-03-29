@@ -1,28 +1,135 @@
 body {
-    font-family: Arial, sans-serif; /* Fonte do texto */
-    background-color: #cacada; /* Cor do fundo */
-    color: #333333; /* Cor do Texto */
-    margin: 0; /* Remove o botão pra arrastar pra baixo */
-    height: 100vh; /* Diz que o corpo do site deve ocupar 100% da altura da tela (Viewport Height) */
-    display: flex; /* Ativa o modo de organização Flexbox */
-    flex-direction: column; /* Organiza os elementos em coluna (um embaixo do outro) */
-    justify-content: center; /* Centraliza tudo na vertical (de cima para baixo) */
-    align-items: center; /* Centraliza tudo na horizontal (da esquerda para a direita) */
+    background: linear-gradient(135deg, #1a0033 0%, #330066 100%); /* Cor de fundo gradiente */
+    background-color: #1a0033; /* Pra Dispositivos que não suportam gradientes */
+    color:  #e0e0e0; /* Cor padrão da fonte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Isso é a fonte de todo o texto*/
+    margin: 0; /* Isso é a margem*/
+
+    /* Desenho do fundo */
+    background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px; /* Ajuste do desenho */
 }
 
-h1 {
-    color: #000000; /* Muda a cor do título */
+#topo-site {
+    background-color: transparent ; /* Isso é o fundo do topo do site ou rodape de cima */ 
+    color: white; /* cor da letra do topo */ 
+    text-align: center; /* Centralizar o texto*/ 
+    padding: 30px 20px 0px 20px; /* "Altura" , "Largura"*/ 
 }
 
-a {
-    text-decoration: none; /* Remove aquele sublinhado feio de links */
-    color: white; /* Cor da letra do botão */
-    background-color: #000000; /* Cor do botão */
-    padding: 10px 20px; /* Tamanho do botão*/
-    border-radius: 5px; /* Arredonda as pontas do botão */
-    margin-top: 20px; /* Dá um espaço acima do botão */
+.titulo-principal {
+    font-size: 40px; /* Tamanho da fonte */ 
+    margin-bottom: 10px; /* Tamanho da largura entre o titulo grande e o sub */ 
+
 }
 
-a:hover {
-    background-color: #19222c31; /* Adiciona cor quando coloca o mouse em cima do botão*/
+.subtitulo {
+    font-size: 20px; /* Tamanho da fonte */ 
+    margin-top: 0; /* Pare */ 
+
+}
+
+.menu-principal {
+    padding: 0px; /* Tamanho do espaço  */ 
+}
+
+.lista-menu {
+    display: flex;                   /* Ativa o modo flexbox para colocar itens lado a lado */
+    justify-content: center;         /* CENTRALIZA os itens horizontalmente na página */
+    align-items: center;             /* Alinha os itens verticalmente (caso o menu seja alto) */
+    list-style: none;                /* Remove as bolinhas da lista */
+    gap: 0px;                       /* Espaçamento entre os botões */
+    padding: 0;                      /* Remove o recuo interno padrão da lista */
+    margin: 0 auto;                  /* Garante que a própria lista não tenha margens externas sobrando */
+    width: 100%;                     /* Faz a lista ocupar a largura total para o 'center' funcionar */
+    margin: 25px auto 0 auto;
+
+    
+}
+.lista-menu li {
+    display: inline; /* Deixa Tudo na mesma Linha  */ 
+    margin: 0 15px; /* Tamanho da margem  */ 
+}
+
+.lista-menu a {
+   text-decoration: none;           /* Remove o sublinhado */  
+    font-weight: bold;               /* Texto em negrito */
+    padding: 10px 25px;              /* Espaçamento interno (altura e largura) */
+    display: inline-block;           /* Permite que o link se comporte como bloco */
+    border-radius: 50px;             /* Deixa as bordas arredondadas (estilo pílula) */
+    border: 2px solid;               /* Define o tamanho da borda */
+    transition: 0.3s;                /* Suaviza a animação ao passar o mouse */
+}
+
+/* --- CORES ESPECÍFICAS PARA CADA CLASSE --- */
+
+.botao-roxo {
+    background-color: #f5f0ff;       /* Cor de fundo bem clarinha */
+    border-color: #9d7cff;           /* Cor da borda roxa */
+    color: #6933ff;                  /* Cor do texto roxa */
+}
+
+.botao-azul {
+    background-color: #f0f7ff;       /* Cor de fundo azul claro */
+    border-color: #3b82f6;           /* Cor da borda azul */
+    color: #0061d5;                  /* Cor do texto azul */
+}
+
+.botao-vermelho {
+    background-color: #fff5f0;       /* Cor de fundo avermelhada/laranja claro */
+    border-color: #f97316;           /* Cor da borda (usei o laranja da foto) */
+    color: #ea580c;                  /* Cor do texto */
+}
+
+.botao-preto {
+    background-color: #f3f4f6;       /* Cor de fundo cinza claro */
+    border-color: #374151;           /* Cor da borda escura */
+    color: #111827;                  /* Cor do texto preta */
+}
+
+/* Efeito ao passar o mouse (opcional) */
+.lista-menu a:hover {
+    filter: brightness(0.9);         /* Escurece levemente o botão ao passar o mouse */
+    transform: translateY(-2px);     /* Faz o botão subir 2px (efeito de clique) */
+}
+
+main {
+    width: 100%; 
+    margin: 30px auto;
+}
+
+.bloco-conteudo,
+.bloco-lateral {
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.bloco-imagem {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bloco-imagem img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+}
+.titulo-secao {
+    color: #222222;
+    margin-top: 0;
+}
+
+.lista-ordenada {
+    line-height: 1.5;
+    background-color: #ffffff;
+    padding-left: 20px
+}
+
+#rodape-site {
+    background-color:  rgb(112, 169, 255);
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
