@@ -1,169 +1,144 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Saniel Luca | Portfólio</title>
+﻿<!DOCTYPE html> <!-- define documento HTML5 -->
+<html lang="pt-BR"> <!-- define idioma do documento -->
+<head> <!-- início do cabeçalho -->
+    <meta charset="UTF-8"> <!-- define codificação UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- permite layout responsivo -->
+    <link rel="stylesheet" href="css/style.css"> <!-- importa arquivo de estilo -->
+    <title>Saniel Luca | Currículo</title> <!-- título exibido na aba do navegador -->
 </head>
-
-<body>
-
-    <div class="caixa-vidro">
-
-        <header id="topo-site">
-
-            <h1 class="titulo-principal">Saniel Luca</h1>
-
-            <p class="subtitulo">Fullstack Developer · UI/UX Designer</p>
-
-            <div class="info-contato">
-                <span>📍 Brasília, DF</span>
-                <span>✉️ saniel@exemplo.com</span>
+<body> <!-- corpo principal da página -->
+    <div class="caixa-vidro"> <!-- contêiner com efeito de vidro -->
+        <header id="topo-site"> <!-- cabeçalho com nome e descrição -->
+            <h1 class="titulo-principal">Saniel Luca</h1> <!-- título principal -->
+            <p class="subtitulo">Fullstack Developer · UI/UX Designer</p> <!-- descrição profissional -->
+            <div class="info-contato"> <!-- área de contato rápido -->
+                <span>📍 Brasília - DF</span> <!-- localização -->
+                <span>✉️ sanielmatei@gmail.com</span> <!-- e-mail -->
             </div>
-
         </header>
-
-
-        <nav class="menu-principal">
-
-            <ul class="lista-menu">
-
-                <li><a href="index.html" class="botao-roxo">Início</a></li>
-
-                <li><a href="#" class="botao-azul">Cursos</a></li>
-
-                <li><a href="#" class="botao-vermelho">Trilhas</a></li>
-
-                <li><a href="contato.html" class="botao-preto">Contato</a></li>
-
+        <nav class="menu-principal"> <!-- navegação principal com ícones -->
+            <ul class="lista-menu"> <!-- lista de botões -->
+                <li> <!-- item de menu Home -->
+                    <a href="#topo-site" class="botao-roxo" aria-label="Início"> <!-- link para o topo -->
+                        <img src="img/home.svg" alt="Home"> <!-- ícone Home -->
+                        <span class="sr-only">Início</span> <!-- texto acessível -->
+                    </a>
+                </li>
+                <li> <!-- item de menu LinkedIn -->
+                    <a href="https://www.linkedin.com/in/saniel-luca-2a46ba211/?isSelfProfile=true" class="botao-azul" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"> <!-- link externo LinkedIn -->
+                        <img src="img/linkedin.png" alt="LinkedIn"> <!-- ícone LinkedIn -->
+                        <span class="sr-only">LinkedIn</span> <!-- texto acessível -->
+                    </a>
+                </li>
+                <li> <!-- item de menu Site -->
+                    <a href="#" class="botao-vermelho" aria-label="Site" target="_blank" rel="noopener noreferrer"> <!-- link externo do site -->
+                        <img src="img/site.png" alt="Site"> <!-- ícone Site -->
+                        <span class="sr-only">Site</span> <!-- texto acessível -->
+                    </a>
+                </li>
+                <li> <!-- item de menu GitHub -->
+                    <a href="https://github.com/SixS2" class="botao-preto" aria-label="GitHub" target="_blank" rel="noopener noreferrer"> <!-- link externo GitHub -->
+                        <img src="img/github.svg" alt="GitHub"> <!-- ícone GitHub -->
+                        <span class="sr-only">GitHub</span> <!-- texto acessível -->
+                    </a>
+                </li>
             </ul>
-
         </nav>
-
-
-        <hr>
-
-
-        <main>
-
-            <section class="secao-flex">
-
-                <div class="coluna-titulo">
-                    <h2 class="titulo-lateral">Educação</h2>
+        <hr> <!-- separador visual -->
+        <main> <!-- conteúdo principal -->
+            <section class="secao-flex"> <!-- seção de Educação -->
+                <div class="coluna-titulo"> <!-- coluna de título da seção -->
+                    <h2 class="titulo-lateral">Educação</h2> <!-- subtítulo da seção -->
                 </div>
-
-                <div class="coluna-conteudo">
-                    <div class="item-lista">
-                        <div class="item-header">
-                            <strong>Técnico em Informática</strong> — Escola Técnica de Brasília (ETB)
-                            <span class="data">2025 - 2026</span>
+                <div class="coluna-conteudo"> <!-- conteúdo da seção -->
+                    <article class="item-lista"> <!-- cartão de formação -->
+                        <div class="item-header"> <!-- cabeçalho do item -->
+                            <strong>Técnico em Informática</strong> — Escola Técnica de Brasília (ETB) <!-- curso e instituição -->
+                            <span class="data">2025 - 2026</span> <!-- período -->
                         </div>
-                    </div>
-                    
-                    <div class="item-lista">
-                        <div class="item-header">
-                            <strong>Análise e Desenvolvimento de Sistemas</strong> — Universidade Católica de Brasília (UCB)
-                            <span class="data">6 de março de 2026 - Presente</span>
+                    </article>
+                    <article class="item-lista"> <!-- cartão de curso atual -->
+                        <div class="item-header"> <!-- cabeçalho do item -->
+                            <strong>
+                                <a href="https://www.catho.com.br/carreira-sucesso/tudo-sobre-analise-e-desenvolvimento-de-sistemas/" class="curso-badge" title="Análise e Desenvolvimento de Sistemas" target="_blank" rel="noopener noreferrer">ADS</a> <!-- badge do curso -->
+                            </strong> — Universidade Católica de Brasília (UCB) <!-- instituição -->
+                            <span class="data">6 de março de 2026 - Cursando</span> <!-- período atual -->
                         </div>
-                    </div>
+                    </article>
                 </div>
-
             </section>
-
-
-            <section class="secao-flex">
-
-                <div class="coluna-titulo">
-                    <h2 class="titulo-lateral">Experiência</h2>
+            <hr> <!-- separador visual -->
+            <section class="secao-flex"> <!-- seção de Experiência -->
+                <div class="coluna-titulo"> <!-- coluna de título -->
+                    <h2 class="titulo-lateral">Experiência</h2> <!-- subtítulo da seção -->
                 </div>
-
-                <div class="coluna-conteudo">
-
-                    <div class="item-lista">
-                        <div class="item-header">
-                            <strong>Técnico em Manutenção de Computadores</strong>
-                            <span class="data">Ativo</span>
+                <div class="coluna-conteudo"> <!-- conteúdo da seção -->
+                    <article class="item-lista"> <!-- experiência 1 -->
+                        <div class="item-header"> <!-- cabeçalho do item -->
+                            <strong>Técnico em Manutenção de Computadores</strong> <!-- cargo -->
+                            <span class="data">Estagiando</span> <!-- status -->
                         </div>
-
-                        <div class="tags">
-                            <span class="tag">Hardware</span>
-                            <span class="tag">Redes</span>
-                            <span class="tag">Manutenção</span>
+                        <div class="tags"> <!-- conjunto de habilidades -->
+                            <span class="tag">Hardware</span> <!-- tag -->
+                            <span class="tag">Redes</span> <!-- tag -->
+                            <span class="tag">Manutenção</span> <!-- tag -->
                         </div>
-
-                        <ul class="lista-detalhes">
-                            <li>Manutenção e reparação de computadores.</li>
-                            <li>Configuração e gerenciamento de redes.</li>
-                            <li>Suporte técnico em hardware e software.</li>
+                        <ul class="lista-detalhes"> <!-- lista de detalhes -->
+                            <li>Manutenção e reparação de computadores.</li> <!-- ponto 1 -->
+                            <li>Configuração e gerenciamento de redes.</li> <!-- ponto 2 -->
+                            <li>Suporte técnico em hardware e software.</li> <!-- ponto 3 -->
                         </ul>
-                    </div>
-
-                    <div class="item-lista">
-                        <div class="item-header">
-                            <strong>Projetos de Desenvolvimento</strong>
-                            <span class="data">Ativo</span>
+                    </article>
+                    <article class="item-lista"> <!-- experiência 2 -->
+                        <div class="item-header"> <!-- cabeçalho do item -->
+                            <strong>Projetos de Desenvolvimento</strong> <!-- cargo/projeto -->
+                            <span class="data">Ativo</span> <!-- status -->
                         </div>
-
-                        <div class="tags">
-                            <span class="tag">Web Development</span>
-                            <span class="tag">Prototipagem</span>
+                        <div class="tags"> <!-- conjunto de habilidades -->
+                            <span class="tag">Web Development</span> <!-- tag -->
+                            <span class="tag">Prototipagem</span> <!-- tag -->
                         </div>
-
-                        <ul class="lista-detalhes">
-                            <li>Participação em projetos de desenvolvimento web e design.</li>
+                        <ul class="lista-detalhes"> <!-- lista de detalhes -->
+                            <li>Participação em projetos de desenvolvimento web.</li> <!-- ponto único -->
                         </ul>
-                    </div>
-
-                    <div class="item-lista">
-                        <div class="item-header">
-                            <strong>Instrutor de Tecnologia</strong>
-                            <span class="data">Ativo • Toda sexta-feira</span>
+                    </article>
+                    <article class="item-lista"> <!-- experiência 3 -->
+                        <div class="item-header"> <!-- cabeçalho do item -->
+                            <strong>Instrutor de Tecnologia</strong> <!-- cargo -->
+                            <span class="data">Ativo • Toda sexta-feira</span> <!-- disponibilidade -->
                         </div>
-
-                        <div class="tags">
-                            <span class="tag">Educação</span>
-                            <span class="tag">Inclusão Digital</span>
+                        <div class="tags"> <!-- conjunto de habilidades -->
+                            <span class="tag">Educação</span> <!-- tag -->
+                            <span class="tag">Inclusão Digital</span> <!-- tag -->
                         </div>
-
-                        <ul class="lista-detalhes">
-                            <li>Aulas de tecnologia para idosos na Universidade Católica de Brasília (UCB).</li>
+                        <ul class="lista-detalhes"> <!-- lista de detalhes -->
+                            <li>Suporte em aulas de tecnologia para idosos e aula para idosos sobre internet na Universidade Católica de Brasília (UCB).</li> <!-- descrição -->
                         </ul>
-                    </div>
-
+                    </article>
                 </div>
-
             </section>
-
-
-            <section class="secao-flex">
-
-                <div class="coluna-titulo">
-                    <h2 class="titulo-lateral">Habilidades</h2>
+            <hr> <!-- separador visual -->
+            <section class="secao-flex"> <!-- seção de Habilidades -->
+                <div class="coluna-titulo"> <!-- coluna de título -->
+                    <h2 class="titulo-lateral">Habilidades</h2> <!-- subtítulo da seção -->
                 </div>
-
-                <div class="coluna-conteudo">
-                    <p class="label-pequeno">Linguagens & Ferramentas</p>
-                    <div class="tags">
-                        <span class="tag">Java</span>
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">Trello</span>
+                <div class="coluna-conteudo"> <!-- conteúdo da seção -->
+                    <p class="label-pequeno">Linguagens & Ferramentas</p> <!-- legenda -->
+                    <div class="tags"> <!-- conjunto de habilidades -->
+                        <span class="tag">Java</span> <!-- tag -->
+                        <span class="tag">HTML/CSS</span> <!-- tag -->
+                        <span class="tag">SQL</span> <!-- tag -->
+                        <span class="tag">MySQL</span> <!-- tag -->
+                        <span class="tag">Node.js</span> <!-- tag -->
+                        <span class="tag">Figma</span> <!-- tag -->
+                        <span class="tag">Trello</span> <!-- tag -->
                     </div>
                 </div>
-
             </section>
-
         </main>
-
-    </div> <footer id="rodape-site">
-        <p>&copy; 2026 Saniel Luca. Todos os direitos reservados.</p>
+    </div>
+    <footer id="rodape-site"> <!-- rodapé do site -->
+        <p>&copy; 2026 By Saniel. Todos os direitos reservados.</p> <!-- informação de copyright -->
     </footer>
-
 </body>
-
 </html>

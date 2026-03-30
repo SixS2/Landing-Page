@@ -1,374 +1,121 @@
-/* Configuração do fundo do site com gradiente e efeito de pontos */
-body {
-    background-color: #1a0033; /* Cor de fundo base */
-    
-    background-image: 
-        linear-gradient(135deg, #01002e 0%, rgb(36, 0, 143) 100%), /* Gradiente roxo */
-        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 1px); /* Pontos brancos */
-    
-    background-size: 100% 100%, 20px 20px; /* Tamanho do fundo */
-    background-attachment: fixed; /* Fixa o fundo para não mexer no scroll */
-    color: #e0e0e0; /* Cor padrão da fonte */
-    font-family: 'Segoe UI', Tahoma, sans-serif; /* Fonte do texto */
-    margin: 0; /* Remove margens do navegador */
-    font-size: 16px; /* Tamanho base da fonte */
+﻿body { background-color: #1a0033; /* cor de fundo base */
+    background-image: linear-gradient(135deg, #01002e 0%, rgb(36, 0, 143) 100%), radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 1px); /* gradiente e pontos */
+    background-size: 100% 100%, 20px 20px; /* dimensões do fundo */
+    background-attachment: fixed; /* fixa o fundo durante o scroll */
+    color: #e0e0e0; /* cor padrão do texto */
+    font-family: 'Segoe UI', Tahoma, sans-serif; /* fonte principal */
+    margin: 0; /* remove margem padrão do body */
+    font-size: 16px; /* tamanho base do texto */
+    line-height: 1.6; /* espaçamento de linhas melhorado */
+    min-height: 100vh; /* garante corpo com altura mínima */
+    overflow-y: scroll; /* força a barra lateral de rolagem vertical */
 }
 
+/* Scrollbar transparente e futurista */
+html { scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.2) transparent; }
+body::-webkit-scrollbar { width: 10px; }
+body::-webkit-scrollbar-track { background: transparent; }
+body::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.18); border-radius: 999px; border: 2px solid transparent; background-clip: padding-box; }
+body::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.28); }
 
-/* Estilo da caixa de vidro (Frutiger Aero) */
-.caixa-vidro {
-    /* Gradiente que cria o brilho de vidro */
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%);
-    
-    backdrop-filter: blur(15px); /* Efeito de desfoque atrás da caixa */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda lateral de vidro */
-    border-top: 2px solid rgba(255, 255, 255, 0.6); /* Brilho no topo da caixa */
-    border-radius: 30px; /* Bordas arredondadas */
-    padding: 3rem; /* Espaçamento interno */
-    margin: 3rem auto; /* Centraliza a caixa e dá margem vertical */
-    max-width: 90%; /* Largura máxima para responsividade */
-    width: 1000px; /* Largura ideal */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura */
-    
-    /* Sombras externa e interna para dar volume */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 10px 15px rgba(255, 255, 255, 0.1);
+.caixa-vidro { /* contêiner principal com efeito glassmorphism */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.05) 100%); /* fundo translúcido */
+    backdrop-filter: blur(15px); /* desfoque atrás do elemento */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* borda leve translúcida */
+    border-top: 2px solid rgba(255, 255, 255, 0.6); /* realce superior */
+    border-radius: 30px; /* cantos arredondados */
+    padding: 3rem; /* espaçamento interno generoso */
+    margin: 3rem auto; /* centraliza a caixa com margem vertical */
+    width: min(100%, 1000px); /* largura fluida com limite */
+    max-width: 1000px; /* largura máxima */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 10px 15px rgba(255, 255, 255, 0.1); /* sombra externa e brilho interno */
 }
 
+#topo-site { text-align: center; margin-bottom: 2rem; } /* centraliza cabeçalho e separa do conteúdo */
+.titulo-principal { font-size: 3rem; margin: 0; color: #fff; } /* título principal grande */
+.subtitulo { font-size: 1.2rem; opacity: 0.8; margin-top: 5px; } /* subtítulo suave */
 
-/* Cabeçalho e Títulos */
-#topo-site { text-align: center; margin-bottom: 2rem; }
-.titulo-principal { font-size: 3rem; margin: 0; color: #fff; }
-.subtitulo { font-size: 1.2rem; opacity: 0.8; margin-top: 5px; }
+.lista-menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; list-style: none; padding: 0; margin: 2rem 0; text-align: center; } /* menu de ícones */
+.lista-menu a { text-decoration: none; width: 64px; height: 64px; padding: 0; border-radius: 50%; border: 2px solid; transition: all 0.3s ease; display: inline-flex; align-items: center; justify-content: center; background-clip: padding-box; } /* botão circular */
+.lista-menu a img { width: 30px; height: 30px; display: block; margin: auto; } /* ícones centralizados */
 
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; white-space: nowrap; } /* acessibilidade invisível */
 
-/* Estilo do Menu e Animações dos Botões */
-.lista-menu {
-    display: flex; /* Alinha botões em linha */
-    justify-content: center; /* Centraliza o menu */
-    flex-wrap: wrap; /* Faz o menu quebrar linha no zoom */
-    gap: 15px; /* Espaço entre os botões */
-    list-style: none; /* Tira as bolinhas da lista */
-    padding: 0; /* Tira o recuo da lista */
-    margin: 2rem 0; /* Margens do menu */
+.lista-menu a:hover { transform: translateY(-5px) scale(1.05); filter: brightness(1.2); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); } /* efeito hover */
+
+.botao-roxo { background: #6d4cff; border-color: #7c5cff; color: #ffffff; } /* botão roxo */
+.botao-azul { background: #2563eb; border-color: #3b82f6; color: #ffffff; } /* botão azul */
+.botao-vermelho { background: #f97316; border-color: #fb923c; color: #ffffff; } /* botão vermelho */
+.botao-preto { background: #111827; border-color: #475569; color: #ffffff; } /* botão preto */
+
+.secao-flex { display: flex; gap: 40px; margin: 2.5rem 0; } /* layout de seção em duas colunas */
+.coluna-titulo { flex: 0 0 150px; } /* coluna fixa dos títulos */
+.coluna-conteudo { flex: 1; text-align: left; min-width: 0; } /* conteúdo expansível */
+.titulo-lateral { font-size: 1.1rem; color: #ffffff; margin: 0; opacity: 0.9; } /* títulos de seção */
+
+.item-header { display: flex; align-items: baseline; flex-wrap: wrap; gap: 1rem; margin-bottom: 12px; } /* cabeçalho de cada item */
+.item-header strong { min-width: 0; } /* permite quebra de texto */
+.item-header .data { display: inline-flex; flex: 0 0 auto; margin-left: auto; white-space: nowrap; } /* data alinhada à direita */
+
+.curso-badge { display: inline-flex; align-items: center; justify-content: center; padding: 0.4rem 0.9rem; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.35); background: linear-gradient(135deg, rgba(119, 79, 255, 0.16), rgba(155, 124, 255, 0.28)); color: #f8f4ff; font-weight: 700; text-decoration: none; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 25px rgba(84, 0, 170, 0.18); transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; } /* estilo do badge do curso */
+.curso-badge:hover, .curso-badge:focus { background: linear-gradient(135deg, rgba(119, 79, 255, 0.24), rgba(155, 124, 255, 0.42)); transform: translateY(-1px); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 14px 30px rgba(84, 0, 170, 0.24); } /* hover no badge */
+
+.item-lista { margin-bottom: 1.9rem; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 24px; padding: 1.25rem; transition: background 0.2s ease, transform 0.2s ease; } /* cartão de informações */
+.item-lista:hover { background: rgba(255, 255, 255, 0.12); } /* destaque ao passar o mouse */
+.item-descricao { font-size: 0.9rem; opacity: 0.75; margin: 5px 0 15px 0; line-height: 1.4; } /* descrição de itens */
+
+.tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0; } /* grupo de tags */
+.tag { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.15); padding: 5px 15px; border-radius: 8px; font-size: 0.8rem; transition: 0.2s; } /* estilo de tag */
+.tag:hover { background: rgba(255, 255, 255, 0.2); transform: scale(1.1); } /* hover nas tags */
+
+hr { border: none; border-top: 1px solid rgba(255, 255, 255, 0.15); margin: 2.5rem 0; } /* linha separadora */
+
+.lista-detalhes { margin: 15px 0; padding-left: 20px; list-style: none; } /* lista detalhada sem marcadores */
+.lista-detalhes li { margin-bottom: 8px; line-height: 1.5; font-size: 0.95rem; opacity: 0.9; } /* item da lista de detalhes */
+.lista-detalhes li::before { content: "▸ "; color: #9d7cff; margin-right: 8px; font-weight: bold; } /* marcador personalizado */
+
+.label-pequeno { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; margin-bottom: 12px; display: block; color: #b8a6ff; } /* texto de legenda */
+
+.info-contato { display: flex; justify-content: center; gap: 20px; margin: 15px 0 0 0; font-size: 0.95rem; opacity: 0.8; } /* informações de contato */
+
+#rodape-site { text-align: center; padding: 2rem; opacity: 0.5; } /* rodapé centralizado */
+
+@media (max-width: 768px) { /* ajustes para tablets e celulares grandes */
+    .caixa-vidro { width: 100%; max-width: 720px; padding: 1.5rem; margin: 1.25rem auto; border-radius: 20px; } /* caixa menor */
+    .titulo-principal { font-size: 2rem; } /* título menor */
+    .subtitulo { font-size: 1rem; } /* subtítulo menor */
+    .lista-menu { gap: 12px; margin: 1.5rem 0; } /* menu mais compacto */
+    .lista-menu a { width: 58px; height: 58px; } /* botões menores */
+    .lista-menu a img { width: 28px; height: 28px; } /* ícones menores */
+    .botao-azul { width: 72px; height: 72px; } /* botão LinkedIn ajustado */
+    .secao-flex { flex-direction: column; gap: 15px; margin: 1.5rem 0; } /* pilha de seções */
+    .coluna-titulo { flex: 0 0 auto; } /* coluna de título fluida */
+    .titulo-lateral { font-size: 1rem; margin-bottom: 10px; } /* título lateral menor */
+    .item-header { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 0.4rem; margin-bottom: 12px; } /* layout de cabeçalho adaptado */
+    .item-header .data { display: block; font-size: 0.8rem; margin-left: 0; } /* data mais discreta */
+    .tags { gap: 8px; margin: 10px 0; } /* tags mais juntas */
+    .tag { padding: 4px 12px; font-size: 0.75rem; } /* tags menores */
+    .lista-detalhes { margin: 10px 0; padding-left: 18px; } /* detalhes compactos */
+    .lista-detalhes li { margin-bottom: 6px; font-size: 0.9rem; } /* texto menor nos detalhes */
+    .label-pequeno { font-size: 0.8rem; margin-bottom: 10px; } /* legenda menor */
+    #rodape-site { padding: 1.5rem; } /* rodapé menor */
+    .info-contato { flex-direction: column; gap: 8px; font-size: 0.9rem; align-items: center; } /* contato empilhado */
+    body { background-attachment: scroll; } /* fundo fixo desativa em mobile */
 }
 
-.lista-menu a {
-    text-decoration: none; /* Tira o sublinhado */
-    font-weight: bold; /* Texto em negrito */
-    padding: 10px 25px; /* Espaço dentro do botão */
-    border-radius: 50px; /* Formato de pílula */
-    border: 2px solid; /* Borda colorida */
-    transition: all 0.3s ease; /* Suaviza as animações */
-    display: inline-block; /* Permite que o botão se mova fisicamente */
-}
-
-/* Animação ao passar o mouse nos botões */
-.lista-menu a:hover {
-    transform: translateY(-5px) scale(1.05); /* Sobe e aumenta levemente */
-    filter: brightness(1.2); /* Aumenta o brilho das cores */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra de levitação */
-}
-
-/* Cores originais dos botões */
-.botao-roxo { background: #f5f0ff; border-color: #9d7cff; color: #6933ff; }
-.botao-azul { background: #f0f7ff; border-color: #3b82f6; color: #0061d5; }
-.botao-vermelho { background: #fff5f0; border-color: #f97316; color: #ea580c; }
-.botao-preto { background: #f3f4f6; border-color: #374151; color: #111827; }
-
-
-/* Estrutura de Duas Colunas */
-.secao-flex {
-    display: flex; /* Coloca as colunas lado a lado */
-    gap: 40px; /* Espaço entre título e conteúdo */
-    margin: 2.5rem 0; /* Distância entre seções */
-}
-
-.coluna-titulo {
-    flex: 0 0 150px; /* Coluna da esquerda travada em 150px */
-}
-
-.coluna-conteudo {
-    flex: 1; /* Coluna da direita ocupa o resto da largura */
-    text-align: left; /* Alinha o texto à esquerda */
-}
-
-.titulo-lateral {
-    font-size: 1.1rem; /* Tamanho do título da seção */
-    color: #ffffff; /* Cor branca */
-    margin: 0; /* Zera margens */
-    opacity: 0.9; /* Transparência leve */
-}
-
-
-/* Tags e Itens de Experiência */
-.item-header {
-    display: flex; /* Alinha nome e data */
-    align-items: baseline; /* Alinha pela linha do texto */
-    margin-bottom: 12px; /* Espaço abaixo do cabeçalho */
-    gap: 5px; /* Espaço entre os elementos */
-    flex-wrap: wrap; /* Permite quebra de linha */
-}
-
-.item-descricao {
-    font-size: 0.9rem; /* Tamanho menor */
-    opacity: 0.75; /* Menos opaco */
-    margin: 5px 0 15px 0; /* Margem abaixo da descrição */
-    line-height: 1.4; /* Espaçamento entre linhas */
-}
-
-.data { 
-    font-size: 0.85rem;
-    opacity: 0.6;
-    margin-left: auto; /* Empurra a data para a direita */
-}
-
-.tags {
-    display: flex; /* Alinha as tags lado a lado */
-    flex-wrap: wrap; /* Pula linha se necessário */
-    gap: 10px; /* Espaço entre tags */
-    margin: 15px 0; /* Margem vertical */
-}
-
-.tag {
-    background: rgba(255, 255, 255, 0.1); /* Fundo escuro transparente */
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Borda fina */
-    padding: 5px 15px; /* Tamanho interno */
-    border-radius: 8px; /* Arredondamento da tag */
-    font-size: 0.8rem; /* Texto pequeno */
-    transition: 0.2s; /* Animação rápida */
-}
-
-/* Animação nas tags ao passar o mouse */
-.tag:hover {
-    background: rgba(255, 255, 255, 0.2); /* Brilho maior */
-    transform: scale(1.1); /* Cresce um pouco */
-}
-
-
-/* Outros Elementos Visuais */
-hr {
-    border: none; /* Tira borda padrão */
-    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Linha transparente */
-    margin: 2.5rem 0; /* Espaçamento da linha */
-}
-
-/* Lista de detalhes com bullets personalizado */
-.lista-detalhes {
-    margin: 15px 0;
-    padding-left: 20px;
-    list-style: none;
-}
-
-.lista-detalhes li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-    font-size: 0.95rem;
-    opacity: 0.9;
-}
-
-.lista-detalhes li::before {
-    content: "▸ ";
-    color: #9d7cff;
-    margin-right: 8px;
-    font-weight: bold;
-}
-
-/* Label pequeno para categorias */
-.label-pequeno {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: 0.7;
-    margin-bottom: 12px;
-    display: block;
-    color: #b8a6ff;
-}
-
-/* Info de contato */
-.info-contato {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 15px 0 0 0;
-    font-size: 0.95rem;
-    opacity: 0.8;
-}
-
-#rodape-site {
-    text-align: center; /* Centraliza o texto */
-    padding: 2rem; /* Espaço no rodapé */
-    opacity: 0.5; /* Texto discreto */
-}
-
-
-/* ============================================ */
-/* RESPONSIVIDADE PARA CELULAR (até 768px)     */
-/* ============================================ */
-
-@media (max-width: 768px) {
-    /* Caixa de vidro se adapta ao mobile */
-    .caixa-vidro {
-        width: 95%; /* Mais margem lateral no mobile */
-        padding: 1.5rem; /* Menos padding interno */
-        margin: 1.5rem auto; /* Menos margem */
-        border-radius: 20px; /* Bordas um pouco menos arredondadas */
-    }
-    
-    /* Títulos e textos menores */
-    .titulo-principal {
-        font-size: 2rem; /* Reduz o tamanho do título principal */
-    }
-    
-    .subtitulo {
-        font-size: 1rem; /* Subtítulo menor */
-    }
-    
-    /* Menu quebra em mais linhas se necessário */
-    .lista-menu {
-        gap: 10px; /* Espaço menor entre botões */
-        margin: 1.5rem 0; /* Menos margem */
-    }
-    
-    .lista-menu a {
-        padding: 8px 18px; /* Botões menores */
-        font-size: 0.95rem;
-    }
-    
-    /* Seção flex vira coluna no mobile */
-    .secao-flex {
-        flex-direction: column; /* Coloca um embaixo do outro */
-        gap: 15px; /* Espaço menor entre elementos */
-        margin: 1.5rem 0; /* Menos margem */
-    }
-    
-    /* Coluna de título não fica travada */
-    .coluna-titulo {
-        flex: 0 0 auto; /* Permite crescer conforme o conteúdo */
-    }
-    
-    .titulo-lateral {
-        font-size: 1rem; /* Título menor */
-        margin-bottom: 10px; /* Espaço abaixo */
-    }
-    
-    /* Ajusta o item-header para quebrar no mobile */
-    .item-header {
-        flex-wrap: wrap; /* Permite quebra natural de linha */
-        gap: 10px; /* Espaço menor entre elementos */
-    }
-    
-    .data {
-        font-size: 0.8rem;
-    }
-    
-    /* Tags se ajustam melhor */
-    .tags {
-        gap: 8px;
-        margin: 10px 0;
-    }
-    
-    .tag {
-        padding: 4px 12px;
-        font-size: 0.75rem;
-    }
-    
-    /* Lista de detalhes em mobile */
-    .lista-detalhes {
-        margin: 10px 0;
-        padding-left: 18px;
-    }
-    
-    .lista-detalhes li {
-        margin-bottom: 6px;
-        font-size: 0.9rem;
-    }
-    
-    /* Label pequeno responsivo */
-    .label-pequeno {
-        font-size: 0.8rem;
-        margin-bottom: 10px;
-    }
-    
-    /* Rodapé com mais conforto */
-    #rodape-site {
-        padding: 1.5rem;
-    }
-    
-    /* Info contato se adapta */
-    .info-contato {
-        flex-direction: column; /* Empilha os itens */
-        gap: 8px;
-        font-size: 0.9rem;
-    }
-}
-
-/* ============================================ */
-/* RESPONSIVIDADE PARA CELULARES PEQUENOS      */
-/* (até 480px)                                 */
-/* ============================================ */
-
-@media (max-width: 480px) {
-    /* Caixa ainda menor */
-    .caixa-vidro {
-        width: 100%; /* Ocupa quase toda a tela */
-        padding: 1rem; /* Menos padding */
-        margin: 0.5rem auto; /* Menos margem */
-        border-radius: 15px; /* Bordas mais suaves */
-    }
-    
-    .titulo-principal {
-        font-size: 1.5rem;
-    }
-    
-    .subtitulo {
-        font-size: 0.9rem;
-    }
-    
-    .lista-menu {
-        flex-direction: column; /* Menu em coluna no mobile muito pequeno */
-        gap: 8px;
-        margin: 1rem 0;
-    }
-    
-    .lista-menu a {
-        width: 100%; /* Botão ocupa a largura total */
-        text-align: center;
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .secao-flex {
-        margin: 1rem 0;
-    }
-    
-    .titulo-lateral {
-        font-size: 0.95rem;
-    }
-    
-    /* Labels pequenos em mobile */
-    .label-pequeno {
-        font-size: 0.75rem;
-        margin-bottom: 8px;
-    }
-    
-    /* Lista de detalhes compacta */
-    .lista-detalhes {
-        padding-left: 15px;
-        font-size: 0.85rem;
-    }
-    
-    /* Animações mais suaves no mobile */
-    .lista-menu a:hover {
-        transform: translateY(-3px) scale(1.02); /* Menos exagerado */
-    }
-    
-    .tag:hover {
-        transform: scale(1.05);
-    }
-    
-    /* Info contato em mobile pequeno */
-    .info-contato {
-        gap: 6px;
-        font-size: 0.85rem;
-    }
+@media (max-width: 480px) { /* ajustes para celulares estreitos */
+    .caixa-vidro { padding: 1rem; margin: 0.5rem auto; border-radius: 15px; } /* caixa mais compacta */
+    .titulo-principal { font-size: 1.7rem; } /* título confortável */
+    .subtitulo { font-size: 0.95rem; } /* subtítulo adaptado */
+    .lista-menu { gap: 8px; margin: 1rem 0; } /* menu compacto */
+    .lista-menu a { width: 52px; height: 52px; } /* botões ainda menores */
+    .lista-menu a img { width: 24px; height: 24px; } /* ícones menores */
+    .botao-azul { width: 66px; height: 66px; } /* botão LinkedIn ajustado */
+    .secao-flex { margin: 1rem 0; } /* menos margem vertical */
+    .titulo-lateral { font-size: 0.95rem; } /* título lateral menor */
+    .label-pequeno { font-size: 0.75rem; margin-bottom: 8px; } /* legenda menor */
+    .lista-detalhes { padding-left: 15px; font-size: 0.85rem; } /* detalhes adaptados */
+    .lista-menu a:hover { transform: translateY(-3px) scale(1.02); } /* hover mais suave */
+    .tag:hover { transform: scale(1.05); } /* hover mais suave nas tags */
+    .info-contato { gap: 6px; font-size: 0.85rem; } /* contato ainda menor */
 }
